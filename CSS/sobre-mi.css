@@ -47,26 +47,38 @@ body {
 
 .nav-superior {
     background: #000;
+    width: 100%;
+    height: 80px; /* altura fija */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-bottom: 2px solid rgba(0, 255, 255, 0.30);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .menu-principal {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
-    padding: 1.2rem 0;
+    gap: 5rem;
+    height: 100%;
 }
 
 .menu-principal a {
     text-decoration: none;
     color: #d9d9d9;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
     text-transform: uppercase;
     position: relative;
     transition: 0.3s;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
 }
 
 .menu-principal a:hover {
@@ -80,7 +92,7 @@ body {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -8px;
     width: 0%;
     height: 2px;
     background: #00ffff;
@@ -91,12 +103,48 @@ body {
     width: 100%;
 }
 
+/* ===== HERO SOBRE MI ===== */
+
+.hero-sobre-mi {
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.contenido-hero-sobre {
+    text-align: center;
+    max-width: 80rem;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.20);
+    border-radius: 2rem;
+
+    padding: 4rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,.15);
+}
+
+.contenido-hero-sobre h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.contenido-hero-sobre p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+}
+
 /* ===== SOBRE MI ===== */
 
 .sobre-mi {
     width: 90%;
     max-width: 120rem;
-    margin: 4rem auto;
+    margin: 5rem auto;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
@@ -107,16 +155,15 @@ body {
     justify-content: center;
     gap: 4rem;
 
-    background: rgba(255, 255, 255, 0.20); /* transparencia */
-    backdrop-filter: blur(12px); /* efecto vidrio */
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
-    border: 1px solid rgba(255, 255, 255, 0.30);
-    padding: 4rem;
+    border: 1px solid rgba(255,255,255,0.20);
     border-radius: 2rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 
-    animation: fadeUp 1.2s ease;
+    padding: 4rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,.15);
 }
 
 /* ===== FOTO ===== */
@@ -131,8 +178,7 @@ body {
     height: 26rem;
     border-radius: 50%;
     object-fit: cover;
-    border: .6rem solid var(--primario);
-    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    border: 5px solid var(--secundario);
     transition: 0.4s;
 }
 
@@ -148,82 +194,74 @@ body {
 
 .presentacion h2 {
     font-size: 3rem;
-    color: #111; /* más oscuro */
     margin-bottom: 2rem;
-    font-weight: bold;
 }
 
 .presentacion p {
-    font-size: 1.8rem;
-    color: #000000; /* texto más fuerte */
-    margin-bottom: 1.5rem;
-    text-align: justify;
-    font-weight: 500;
+    font-size: 1.7rem;
     line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+    text-align: justify;
 }
 
 /* ===== PORTAFOLIO ===== */
 
 .portafolio {
-    margin-top: 5rem;
-    text-align: center;
+    margin-top: 6rem;
 }
 
 .portafolio h2 {
-    font-size: 3rem;
-    color: #ffffff;
-    margin-bottom: 3rem;
-    font-weight: bold;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 4rem;
 }
 
-/* GRID */
+/* ===== GRID PORTAFOLIO ===== */
 
 .grid-portafolio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 3rem;
 }
 
-/* TARJETA */
+/* ===== TARJETAS ===== */
 
 .demo {
     position: relative;
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.20);
+    border-radius: 2rem;
+
     padding: 2rem;
+    text-align: center;
     cursor: pointer;
     overflow: hidden;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,.15);
     transition: 0.4s;
-    box-shadow: 0 8px 20px rgba(0,0,0,.12);
 }
 
 .demo:hover {
-    transform: scale(1.03);
-    box-shadow: 0 15px 30px rgba(0,0,0,.18);
+    transform: translateY(-8px);
 }
-
-/* TITULO */
 
 .demo h3 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
+    margin-bottom: 2rem;
 }
-
-/* IMAGEN */
 
 .img-demo {
     width: 100%;
-    height: 220px;
+    height: 22rem;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 1.5rem;
 }
 
-/* OVERLAY HOVER */
+/* ===== OVERLAY ===== */
 
 .overlay {
     position: absolute;
@@ -232,7 +270,7 @@ body {
     width: 100%;
     height: 100%;
 
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0,0,0,.80);
     color: white;
 
     display: flex;
@@ -241,10 +279,10 @@ body {
 
     opacity: 0;
     transition: 0.4s;
+
     padding: 2rem;
     text-align: center;
     font-size: 1.6rem;
-    border-radius: 20px;
 }
 
 .demo:hover .overlay {
@@ -256,59 +294,45 @@ body {
 .modal {
     display: none;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
 
-    background: rgba(0,0,0,.75);
+    background: rgba(0,0,0,.80);
 
     justify-content: center;
     align-items: center;
 }
 
-/* CONTENIDO MODAL */
-
 .modal-contenido {
     background: white;
     width: 80%;
-    max-width: 800px;
+    max-width: 80rem;
     padding: 3rem;
-    border-radius: 20px;
-    position: relative;
-    animation: aparecer 0.4s ease;
+    border-radius: 2rem;
     text-align: center;
+    position: relative;
 }
-
-
-/* BOTON CERRAR */
 
 .cerrar {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 2rem;
+    right: 3rem;
     font-size: 3rem;
     cursor: pointer;
     color: #333;
 }
 
-.cerrar:hover {
-    color: red;
-}
-
-/* IMAGEN MODAL */
-
 .img-modal {
     width: 100%;
-    max-height: 400px;
+    max-height: 40rem;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 1.5rem;
     margin: 2rem 0;
 }
-
-/* TEXTO MODAL */
 
 .modal-contenido h2 {
     font-size: 3rem;
@@ -321,41 +345,25 @@ body {
     color: #333;
 }
 
-/* ANIMACION */
+/* ===== BOTÓN VOLVER ===== */
 
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.boton-volver {
+    display: block;
+    width: fit-content;
+    margin: 5rem auto;
+    padding: 1.5rem 3rem;
+    background: var(--primario);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: 0.4s;
 }
 
-/* ===== ANIMACIONES ===== */
-
-@keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.boton-volver:hover {
+    background: var(--secundario);
+    transform: translateY(-3px);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -376,16 +384,18 @@ body {
 }
 
 @media (max-width: 600px) {
+    .menu-principal {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
     .grid-portafolio {
         grid-template-columns: 1fr;
     }
 
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    .presentacion h2 {
-        font-size: 2.2rem;
+    .contenido-hero-sobre h1 {
+        font-size: 3rem;
     }
 
     .foto-perfil {
