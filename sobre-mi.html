@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí</title>
+
+    <!-- CSS SOLO DE SOBRE MI -->
+    <link rel="stylesheet" href="CSS/sobre-mi.css">
+</head>
+
+<body>
+
+    <div class="nav-superior">
+
+        <nav class="menu-principal contenedor">
+            <a href="index.htm">Inicio</a>
+            <a href="sobre-mi.html">Sobre Mí</a>
+            <a href="clientes.html">Clientes</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+    </div>
+
+    <!-- SECCIÓN SOBRE MI -->
+    <section class="sobre-mi">
+
+        <!-- CONTENEDOR PRINCIPAL -->
+        <div class="contenedor-principal">
+
+            <!-- FOTO IZQUIERDA -->
+            <div class="foto">
+                <img src="img/perfil.jpeg" alt="Foto de perfil" class="foto-perfil">
+            </div>
+
+            <!-- PRESENTACIÓN DERECHA -->
+            <div class="presentacion">
+
+                <h2>Daniel Rentera Espiritu</h2>
+
+                <p>
+                    Actualmente soy estudiante de la carrera de Arquitectura de Plataformas
+                    y Servicios de Tecnologías de la Información en el Instituto de Educación
+                    Superior Tecnológico Público Pasco.
+                </p>
+
+                <p>
+                    Tengo 20 años y soy de la ciudad de Cerro de Pasco, Perú.
+                    Y me apasiona el desarrollo web, el diseño digital y la creación de
+                    soluciones tecnológicas modernas que aporten valor a las empresas
+                    y mejoren la experiencia de los usuarios. Me especializo en páginas web,
+                    aplicaciones funcionales, diseño corporativo y proyectos orientados
+                    a la innovación tecnológica.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ===== PORTAFOLIO ===== -->
+
+        <div class="portafolio">
+
+            <h2>Portafolio</h2>
+
+            <div class="grid-portafolio">
+
+                <!-- PROYECTO 1 -->
+
+                <div class="demo" onclick="abrirModal()">
+
+                    <h3>Sistema de Reservas</h3>
+
+                    <img src="img/reservas.png" alt="Sistema de Reservas" class="img-demo">
+
+                    <div class="overlay">
+                        <p>
+                            Sistema web diseñado para la gestión de reservas,
+                            citas y control de disponibilidad.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- ===== MODAL ===== -->
+
+                <div class="modal" id="modalProyecto">
+
+                    <div class="modal-contenido">
+
+                        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+
+                        <h2>Sistema de Reservas</h2>
+
+                        <img src="img/reservas.png" alt="Sistema de Reservas" class="img-modal">
+
+                        <p>
+                            Este proyecto consiste en un sistema web desarrollado para la
+                            administración de reservas, control de horarios, citas y gestión
+                            de clientes. Permite optimizar procesos empresariales, mejorar
+                            la atención al cliente y automatizar tareas administrativas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===== JAVASCRIPT ===== -->
+
+                <script>
+                    function abrirModal() {
+                        document.getElementById("modalProyecto").style.display = "flex";
+                    }
+
+                    function cerrarModal() {
+                        document.getElementById("modalProyecto").style.display = "none";
+                    }
+                </script>
+
+                <!-- ===== PROYECTO 2 ===== -->
+
+                <div class="demo" onclick="abrirModalCorporativa()">
+
+                    <h3>Página Web Corporativa</h3>
+
+                    <img src="img/corporativa.png" alt="Página Web Corporativa" class="img-demo">
+
+                    <div class="overlay">
+                        <p>
+                            Sitio web empresarial diseñado para fortalecer la presencia digital
+                            y mejorar la imagen profesional de una empresa.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- ===== MODAL PROYECTO 2 ===== -->
+
+                <div class="modal" id="modalCorporativa">
+
+                    <div class="modal-contenido">
+
+                        <span class="cerrar" onclick="cerrarModalCorporativa()">&times;</span>
+
+                        <h2>Página Web Corporativa</h2>
+
+                        <img src="img/corporativa.png" alt="Página Web Corporativa" class="img-modal">
+
+                        <p>
+                            Este proyecto consiste en el desarrollo de una página web corporativa
+                            orientada a empresas que buscan fortalecer su identidad digital,
+                            mejorar su posicionamiento en internet y brindar una mejor experiencia
+                            a sus clientes. Incluye secciones informativas, contacto, servicios,
+                            portafolio empresarial y diseño moderno adaptable a dispositivos móviles.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===== JAVASCRIPT ===== -->
+
+                <script>
+                    function abrirModalCorporativa() {
+                        document.getElementById("modalCorporativa").style.display = "flex";
+                    }
+
+                    function cerrarModalCorporativa() {
+                        document.getElementById("modalCorporativa").style.display = "none";
+                    }
+                </script>
+
+                <!-- ===== PROYECTO 3 ===== -->
+
+                <div class="demo" onclick="abrirModalComida()">
+
+                    <h3>App de Comida Rápida</h3>
+
+                    <img src="img/comida-rapida.png" alt="App de Comida Rápida" class="img-demo">
+
+                    <div class="overlay">
+                        <p>
+                            Aplicación móvil diseñada para pedidos rápidos,
+                            delivery y gestión eficiente de restaurantes.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- ===== MODAL PROYECTO 3 ===== -->
+
+                <div class="modal" id="modalComida">
+
+                    <div class="modal-contenido">
+
+                        <span class="cerrar" onclick="cerrarModalComida()">&times;</span>
+
+                        <h2>App de Comida Rápida</h2>
+
+                        <img src="img/comida-rapida.png" alt="App de Comida Rápida" class="img-modal">
+
+                        <p>
+                            Este proyecto consiste en una aplicación móvil orientada
+                            a restaurantes de comida rápida, permitiendo a los clientes
+                            realizar pedidos en línea, consultar menús, promociones,
+                            seguimiento de delivery y pagos digitales. Su objetivo es
+                            optimizar el servicio, reducir tiempos de espera y mejorar
+                            la experiencia del cliente.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===== JAVASCRIPT ===== -->
+
+                <script>
+                    function abrirModalComida() {
+                        document.getElementById("modalComida").style.display = "flex";
+                    }
+
+                    function cerrarModalComida() {
+                        document.getElementById("modalComida").style.display = "none";
+                    }
+                </script>
+
+                <!-- ===== PROYECTO 4 ===== -->
+
+                <div class="demo" onclick="abrirModalBanco()">
+
+                    <h3>Sistema Bancario</h3>
+
+                    <img src="img/bancario.png" alt="Sistema Bancario" class="img-demo">
+
+                    <div class="overlay">
+                        <p>
+                            Plataforma digital para gestión de cuentas,
+                            transferencias y operaciones financieras seguras.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- ===== MODAL PROYECTO 4 ===== -->
+
+                <div class="modal" id="modalBanco">
+
+                    <div class="modal-contenido">
+
+                        <span class="cerrar" onclick="cerrarModalBanco()">&times;</span>
+
+                        <h2>Sistema Bancario</h2>
+
+                        <img src="img/bancario.png" alt="Sistema Bancario" class="img-modal">
+
+                        <p>
+                            Este proyecto consiste en un sistema bancario digital diseñado
+                            para la administración de cuentas, transferencias, pagos,
+                            historial de movimientos y control financiero. Permite brindar
+                            mayor seguridad, rapidez y eficiencia en los servicios bancarios,
+                            mejorando la experiencia del usuario y optimizando los procesos
+                            internos de la entidad financiera.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===== JAVASCRIPT ===== -->
+
+                <script>
+                    function abrirModalBanco() {
+                        document.getElementById("modalBanco").style.display = "flex";
+                    }
+
+                    function cerrarModalBanco() {
+                        document.getElementById("modalBanco").style.display = "none";
+                    }
+                </script>
+
+                <!-- ===== PROYECTO 5 ===== -->
+
+                <div class="demo" onclick="abrirModalInventario()">
+
+                    <h3>Control de Inventario</h3>
+
+                    <img src="img/inventario.png" alt="Control de Inventario" class="img-demo">
+
+                    <div class="overlay">
+                        <p>
+                            Sistema digital para el control de stock,
+                            productos, entradas y salidas de almacén.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- ===== MODAL PROYECTO 5 ===== -->
+
+                <div class="modal" id="modalInventario">
+
+                    <div class="modal-contenido">
+
+                        <span class="cerrar" onclick="cerrarModalInventario()">&times;</span>
+
+                        <h2>Control de Inventario</h2>
+
+                        <img src="img/inventario.png" alt="Control de Inventario" class="img-modal">
+
+                        <p>
+                            Este proyecto consiste en un sistema de control de inventario
+                            diseñado para empresas que necesitan administrar productos,
+                            stock, entradas, salidas y reportes de almacén de forma eficiente.
+                            Permite reducir pérdidas, mejorar la organización y optimizar
+                            la gestión interna del negocio mediante procesos automatizados.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===== JAVASCRIPT ===== -->
+
+                <script>
+                    function abrirModalInventario() {
+                        document.getElementById("modalInventario").style.display = "flex";
+                    }
+
+                    function cerrarModalInventario() {
+                        document.getElementById("modalInventario").style.display = "none";
+                    }
+                </script>
+
+                <!-- ===== PROYECTO 6 ===== -->
+
+                <div class="demo" onclick="abrirModalFabricacion()">
+
+                    <h3>App de Taller de Fabricación Digital</h3>
+
+                    <img src="img/fabricacion-digital.png" alt="App de Taller de Fabricación Digital" class="img-demo">
+
+                    <div class="overlay">
+                        <p>
+                            Aplicación orientada a la gestión de procesos,
+                            diseño y control de producción en talleres digitales.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- ===== MODAL PROYECTO 6 ===== -->
+
+                <div class="modal" id="modalFabricacion">
+
+                    <div class="modal-contenido">
+
+                        <span class="cerrar" onclick="cerrarModalFabricacion()">&times;</span>
+
+                        <h2>App de Taller de Fabricación Digital</h2>
+
+                        <img src="img/fabricacion-digital.png" alt="App de Taller de Fabricación Digital"
+                            class="img-modal">
+
+                        <p>
+                            Este proyecto consiste en una aplicación diseñada para talleres
+                            de fabricación digital, permitiendo la gestión de pedidos,
+                            control de materiales, seguimiento de producción, diseño de piezas
+                            y administración de maquinaria tecnológica como impresoras 3D,
+                            cortadoras láser y equipos CNC. Su objetivo es optimizar los
+                            procesos productivos y mejorar la eficiencia operativa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===== JAVASCRIPT ===== -->
+
+                <script>
+                    function abrirModalFabricacion() {
+                        document.getElementById("modalFabricacion").style.display = "flex";
+                    }
+
+                    function cerrarModalFabricacion() {
+                        document.getElementById("modalFabricacion").style.display = "none";
+                    }
+                </script>
+
+            </div>
+
+        </div>
+
+    </section>
+</body>
+
+</html>
