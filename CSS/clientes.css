@@ -181,6 +181,14 @@ body {
     line-height: 1.8;
 }
 
+/* ===== FOOTER ===== */
+
+.footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 1.5rem;
+}
+
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
@@ -208,4 +216,62 @@ body {
     .card-cliente {
         padding: 2rem;
     }
+}
+
+/* ===== BOTÓN VOLVER ARRIBA ===== */
+
+#btn-arriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+
+    background: #00ffff;
+    color: #000;
+    font-size: 2.2rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    display: none;
+
+    box-shadow:
+        0 0 15px rgba(0,255,255,.5),
+        0 0 25px rgba(0,255,255,.2);
+
+    transition: 0.3s;
+}
+
+#btn-arriba:hover {
+    transform: scale(1.1);
+    background: #00d9ff;
+}
+
+/* ===== CURSOR GLOW ===== */
+
+.cursor-glow {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(0, 255, 255, 0.8);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+    z-index: 99999;
+
+    transform: translate(-50%, -50%);
+
+    box-shadow:
+        0 0 15px rgba(0,255,255,.8),
+        0 0 30px rgba(0,255,255,.4),
+        0 0 50px rgba(0,255,255,.2);
+
+    transition: transform 0.90s linear;
 }
